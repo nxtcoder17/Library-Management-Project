@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:controller="library.ui.book.display.DisplayBookController"
+      xmlns:fx="https://javafx.com/fxml"
+      stylesheets="/library/themes/dark_theme.css"
+      styleClass="rootPane"
+      spacing="10" alignment="CENTER">
+
+      <TableView fx:id="table" styleClass="tableView"/>
+
+      <HBox spacing="30" alignment="CENTER">
+          <Button text="Get Back"
+              styleClass="submitButton"
+              fx:id="back_button"
+              onAction="#back_button_clicked" />
+      </HBox>
+</VBox>

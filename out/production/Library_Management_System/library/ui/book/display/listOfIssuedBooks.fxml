@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="library.ui.book.display.ListOfIssuedBooksController"
+      xmlns:fx="https://javafx.com/fxml"
+      stylesheets="/library/themes/dark_theme.css"
+      styleClass="rootPane"
+      spacing="10" alignment="CENTER" >
+
+    <TableView fx:id="table" styleClass="tableView" />
+
+    <Button
+        fx:id="button_cancel"
+        text="Get Back"
+        onAction="#button_cancel_clicked" />
+</VBox>

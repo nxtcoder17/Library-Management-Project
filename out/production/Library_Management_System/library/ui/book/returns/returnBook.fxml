@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox fx:controller="library.ui.book.returns.ReturnBookController"
+    xmlns:fx="https://javafx.com/fxml"
+    spacing="15" alignment="CENTER"
+    stylesheets="/library/themes/dark_theme.css"
+    styleClass="rootPane">
+
+    <GridPane hgap="15" vgap="15" alignment="CENTER" >
+        <Label GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="RIGHT"
+            text="Library ID" styleClass="addBook-labels" />
+        <TextField GridPane.rowIndex="0" GridPane.columnIndex="1"
+            prefWidth="250"
+            fx:id="field_libraryId"
+            styleClass="textField" />
+
+        <Label GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="RIGHT"
+            text="Book ID" styleClass="addBook-labels" />
+        <TextField GridPane.rowIndex="1" GridPane.columnIndex="1"
+            prefWidth="250"
+            fx:id="field_bookId"
+            styleClass="textField" />
+
+        <Button GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+            text="Calc. Fine" 
+            styleClass="submitButton"
+            onAction="#calc_fine" />
+
+        <Label GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="RIGHT"
+            text="Fines: " styleClass="addBook-labels" />
+        <TextField GridPane.rowIndex="3" GridPane.columnIndex="1"
+            editable="false"
+            fx:id="field_fine"
+            promptText="0"
+            prefWidth="250"
+            styleClass="textField" />
+
+    </GridPane>
+
+    <HBox spacing="40" alignment="CENTER">
+        <Button fx:id="button_submit"
+                text="submit"
+                styleClass="submitButton"
+                onAction="#button_submit_clicked" />
+
+        <Button fx:id="button_cancel"
+                text="cancel"
+                styleClass="submitButton"
+                onAction="#button_cancel_clicked" />
+    </HBox>
+</VBox>

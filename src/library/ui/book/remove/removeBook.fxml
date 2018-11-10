@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml"
+    fx:controller="library.ui.book.remove.RemoveBookController"
+    prefHeight="400.0" prefWidth="600.0"
+    stylesheets="/library/themes/dark_theme.css">
+
+    <GridPane hgap="50" vgap="50" alignment="CENTER">
+        <Label GridPane.rowIndex="1" GridPane.columnIndex="1"
+               GridPane.halignment="RIGHT"
+               text="Book ID" styleClass="addBook-labels" />
+        <TextField GridPane.rowIndex="1" GridPane.columnIndex="2"
+                   fx:id="field_bookId" styleClass="textField" />
+    </GridPane>
+
+    <HBox spacing="30" alignment="CENTER">
+        <Button fx:id="button_submit"
+                text="submit" styleClass="submitButton"
+                onAction="#button_submit_clicked" />
+        <Button fx:id="button_cancel"
+                text="cancel" styleClass="submitButton"
+                onAction="#button_cancel_clicked" />
+    </HBox>
+</VBox>

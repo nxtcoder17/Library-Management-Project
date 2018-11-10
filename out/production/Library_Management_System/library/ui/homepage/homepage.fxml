@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox fx:controller="library.ui.homepage.HomePageController"
+    xmlns:fx="https://javafx.com/fxml"
+    stylesheets="/library/themes/dark_theme.css"
+    styleClass="rootPane"
+    spacing="30" alignment="CENTER" >
+
+    <MenuBar styleClass="menuBar">
+        <Menu text="My_Account" styleClass="menuMenu">
+          <graphic> <ImageView>
+              <Image url="/library/images/account.png"/>
+            </ImageView> </graphic>
+
+            <MenuItem text="LogOut" onAction="#logout_method">
+                <graphic> <ImageView>
+                        <Image url="/library/images/exit.png" />
+                </ImageView> </graphic>
+            </MenuItem>
+        </Menu>
+    </MenuBar>
+
+
+    <HBox spacing="50" alignment="CENTER" >
+        <Button fx:id="button_addBook"
+            prefWidth="220" prefHeight="50"
+            styleClass="submitButton" text="Add Book"
+            onAction="#button_addBook_clicked">
+            <graphic>
+                <ImageView fitHeight="50" fitWidth="100" preserveRatio="true">
+                <Image url="/library/images/addBook.png"/>
+            </ImageView> </graphic>
+        </Button>
+
+        <Button fx:id="button_addMembers"
+            prefWidth="220" prefHeight="50"
+            text="Add Members" styleClass="submitButton"
+            onAction="#button_addMembers_clicked">
+            <graphic>
+                <ImageView fitHeight="50" fitWidth="100" preserveRatio="true">
+                <Image url="/library/images/addMember.png" />
+            </ImageView></graphic>
+        </Button>
+
+    </HBox>
+
+    <HBox spacing="50" alignment="CENTER" >
+        <Button fx:id="button_issueBook"
+                prefWidth="220" prefHeight="50"
+                text="Issue Book" styleClass="submitButton"
+                onAction="#button_issueBook_clicked">
+            <graphic> <ImageView>
+                <Image url="/library/images/borrow-book.png"/>
+            </ImageView> </graphic>
+        </Button>
+
+        <Button fx:id="button_returnBook"
+            prefWidth="220" prefHeight="50"
+            text="Return Book" styleClass="submitButton"
+            onAction="#button_returnBook_clicked" >
+            <graphic> <ImageView>
+                <Image url="/library/images/return-book.png"/>
+            </ImageView> </graphic>
+        </Button>
+    </HBox>
+
+    <HBox spacing="50" alignment="CENTER">
+        <Button fx:id="button_displayBook"
+            prefWidth="220" prefHeight="50"
+            text="Display Books" styleClass="submitButton"
+            onAction="#button_displayBook_clicked">
+            <graphic>
+                <ImageView fitHeight="50" fitWidth="100" preserveRatio="true">
+                <Image url="/library/images/booksDisplay.png" />
+            </ImageView></graphic>
+        </Button>
+
+        <Button fx:id="button_listOfIssuedBooks"
+            prefWidth="220" prefHeight="50"
+            text="Issued Books" styleClass="submitButton"
+            onAction="#button_listOfIssuedBooks_clicked">
+            <graphic><ImageView>
+                <Image url="/library/images/issuedBooks.png"/>
+            </ImageView></graphic>
+        </Button>
+    </HBox>
+
+    <HBox spacing="50" alignment="CENTER">
+        <Button fx:id="button_removeBook"
+            prefWidth="220" prefHeight="50"
+            text="Remove Book" styleClass="submitButton"
+            onAction="#button_removeBook_clicked">
+            <graphic><ImageView>
+                <Image url="/library/images/removeBook.png"/>
+            </ImageView></graphic>
+        </Button>
+
+        <Button fx:id="button_removeMember"
+            prefWidth="220" prefHeight="50"
+            text="Remove Member" styleClass="submitButton"
+            onAction="#button_removeMember_clicked">
+            <graphic><ImageView>
+                <Image url="/library/images/removeMember.png"/>
+            </ImageView></graphic>
+        </Button>
+    </HBox>
+</VBox>
